@@ -1,95 +1,118 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <div className={styles.wrapper}>
+        <section className={styles.section}>
+          <div className={styles["athlets-image-container"]}>
+            <Image src="/athlets.png" alt="athlets" objectFit="cover" fill />
+          </div>
+          <div className={styles["content-wrapper"]}>
+            <div className={styles.content}>
+              <div className={styles.header}>ATHLETS</div>
+              <div className={styles["title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number}>01</div>
+                  <div className={styles.underline} />
+                </div>
+                <div className={styles.title}>CONNECTION</div>
+              </div>
+              <div className={styles.detail}>
+                Connect with coaches directly, you can ping coaches to view
+                profile.
+              </div>
+            </div>
+          </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <div className={styles["content-wrapper-second"]}>
+            <div className={styles.content}>
+              <div className={styles["title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number}>02</div>
+                  <div className={styles["underline-second"]} />
+                </div>
+                <div className={styles.title}>COLLABORATION</div>
+              </div>
+              <div className={styles.detail2}>
+                Work with other student athletes to  increase visability. When
+                you share and like other players videos it will increase your
+                visability as a player. This is the team work aspect to Surface
+                1.
+              </div>
+            </div>
+          </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <div className={styles["content-wrapper-third"]}>
+            <div className={styles.content}>
+              <div className={styles["title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number}>03</div>
+                  <div className={styles["underline-white"]} />
+                </div>
+                <div className={styles.title}>GROWTH</div>
+              </div>
+              <div className={styles.detail3}>
+                Resources and tools for you to get better as a student Athelte.
+                Access to training classes, tutor sessions, etc 
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles["players-image-container"]}>
+            <Image src="/players.png" alt="players" objectFit="cover" fill />
+          </div>
+          <div className={styles["players-content-wrapper"]}>
+            <div className={styles["players-content"]}>
+              <div className={styles.header2}>PLAYERS</div>
+              <div className={styles["players-title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number}>01</div>
+                  <div className={styles.underline} />
+                </div>
+                <div className={styles.title}>CONNECTION</div>
+              </div>
+              <div className={styles["players-detail"]}>
+                Connect with talented athlete directly, you can watch their
+                skills through video showreels directly from Surface 1.
+              </div>
+            </div>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          <div className={styles["players-content-wrapper-second"]}>
+            <div className={styles["players-content-second"]}>
+              <div className={styles["title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number}>02</div>
+                  <div className={styles["underline-second"]} />
+                </div>
+                <div className={styles.title}>COLLABORATION</div>
+              </div>
+              <div className={styles["players-detail-2"]}>
+                Work with recruiter to increase your chances of finding talented
+                athlete.
+              </div>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className={styles["players-content-wrapper-third"]}>
+            <div className={styles["players-content-second"]}>
+              <div className={styles["title-layout"]}>
+                <div className={styles["number-layout"]}>
+                  <div className={styles.number2}>03</div>
+                  <div className={styles["underline-white"]} />
+                </div>
+                <div className={styles.title}>GROWTH</div>
+              </div>
+              <div className={styles["players-detail-3"]}>
+                Save your time, recruit proper athlets for your team.
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
-  )
+  );
 }
