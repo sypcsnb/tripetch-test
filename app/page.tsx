@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.scss";
+import styles from "./styles/page.module.scss";
 
 export default function Home() {
   return (
@@ -63,6 +63,26 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles["players-image-container"]}>
             <Image src="/players.png" alt="players" objectFit="cover" fill />
+          </div>
+          <div className={styles.line1}>
+            <Image src="/Path 45 Copy.svg" alt="line1" objectFit="cover" fill />
+          </div>
+          <div className={styles.line2}>
+            <Image src="/Path 45.svg" alt="line1" objectFit="cover" fill />
+          </div>
+          <div className={styles.plus1}>
+            <Image src="/Rectangle 34.svg" alt="plus1" objectFit="cover" fill />
+          </div>
+          <div className={styles.plus2}>
+            <Image
+              src="/Rectangle 34 Copy.svg"
+              alt="plus2"
+              objectFit="cover"
+              fill
+            />
+          </div>
+          <div className={styles.plus3}>
+            <Image src="/Rectangle 34.svg" alt="plus3" objectFit="cover" fill />
           </div>
           <div className={styles["players-content-wrapper"]}>
             <div className={styles["players-content"]}>
