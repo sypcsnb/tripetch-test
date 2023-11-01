@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #ffffff;
   width: 100%;
+  max-width: 1920px;
 }
 
 .wrapper {
@@ -33,13 +34,46 @@
   @include xxl {
     left: 9%;
   }
-  // @include xl {
-  //   left: 9%;
-  // }
+
+  @media (max-width: 1480px) {
+    left: 0;
+  }
+
+  @include xl {
+    left: 0;
+    height: 699px;
+    width: 518px;
+    top: 120px;
+  }
+
+  @include lg {
+    left: -161px;
+    height: 699px;
+    width: 518px;
+    top: 120px;
+  }
+
+  @include sm {
+    left: 16%;
+  }
 }
 .content-wrapper {
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 1480px) {
+    padding-right: 30px;
+  }
+
+  @include md {
+    justify-content: normal;
+    padding-left: 291px;
+  }
+
+  @include sm {
+    padding-left: 32px;
+    height: 682px;
+  }
 }
 
 .content {
@@ -47,6 +81,14 @@
   flex-direction: column;
   position: relative;
   width: 50%;
+
+  @include md {
+    width: 100%;
+  }
+
+  @include sm {
+    display: none;
+  }
   /* margin-top: 24px;
     margin-left: 155px; */
 }
@@ -59,6 +101,10 @@
 .content-wrapper-third {
   @extend .content-wrapper;
   background-color: #5e3db3;
+
+  @include sm {
+    display: none;
+  }
 }
 
 .header {
@@ -67,6 +113,14 @@
   color: #e7e7e7;
   line-height: 105.47px;
   margin-top: 24px;
+
+  @include md {
+    margin-top: 87px;
+  }
+
+  @include sm {
+    margin-top: 0;
+  }
 }
 
 .title-layout {
@@ -74,6 +128,22 @@
   gap: 5px;
   margin-top: 64px;
   align-items: center;
+
+  @include md {
+    margin-top: 36px;
+  }
+
+  @include sm {
+    display: none;
+  }
+}
+
+.title-layout-second {
+  @extend .title-layout;
+
+  @include md {
+    margin-top: 30px;
+  }
 }
 
 .number-layout {
@@ -126,7 +196,18 @@
   margin-top: 31px;
   margin-bottom: 56px;
   max-width: 717px;
+
+  @include md {
+    font-size: 18px;
+    margin-top: 21px;
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    display: none;
+  }
 }
+
 .detail2 {
   @extend .detail;
   margin-top: 21px;
@@ -136,6 +217,10 @@
   @extend .detail2;
   color: #ffffff;
   margin-bottom: 98px;
+
+  @include md {
+    margin-bottom: 58px;
+  }
 }
 
 .players-image-container {
@@ -148,7 +233,18 @@
   @include xxl {
     left: 41.87%;
   }
+
+  @include xl {
+    height: 568px;
+    width: 691px;
+    top: 33px;
+  }
+
+  @include md {
+    left: 331px;
+  }
 }
+
 .players-content-wrapper {
   display: flex;
 }
@@ -156,8 +252,20 @@
 .players-content {
   display: flex;
   flex-direction: column;
-  margin-top: 124px;
-  margin-left: 322px;
+  padding-top: 124px;
+  padding-left: 322px;
+
+  @include xxl {
+    padding-left: 16.77%;
+  }
+
+  @media (max-width: 1480px) {
+    padding-left: 30px;
+  }
+
+  @include xl {
+    padding-top: 52px;
+  }
 }
 
 .header2 {
@@ -169,11 +277,45 @@
 .players-title-layout {
   @extend .title-layout;
   margin-top: 68px;
+
+  @include md {
+    margin-top: 34px;
+  }
+}
+
+.players-title-layout-second {
+  display: flex;
+  gap: 5px;
+  margin-top: 52px;
+  align-items: center;
+
+  @include md {
+    margin-top: 51px;
+  }
+}
+
+.players-title-layout-third {
+  display: flex;
+  gap: 5px;
+  margin-top: 87px;
+  align-items: center;
+
+  @include md {
+    margin-top: 44px;
+  }
 }
 
 .players-detail {
   @extend .detail2;
   margin-bottom: 69px;
+
+  @include lg {
+    width: 432px;
+  }
+
+  @include md {
+    margin-bottom: 10px;
+  }
 }
 
 .players-content-wrapper-second {
@@ -183,12 +325,20 @@
 
 .players-content-second {
   @extend .players-content;
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .players-detail-2 {
   @extend .detail2;
   margin-bottom: 102px;
+
+  @include lg {
+    width: 432px;
+  }
+
+  @include md {
+    margin-bottom: 65px;
+  }
 }
 
 .players-content-wrapper-third {
@@ -199,6 +349,15 @@
 .players-detail-3 {
   @extend .detail3;
   margin-bottom: 62px;
+
+  @include lg {
+    width: 432px;
+  }
+
+  @include md {
+    width: 432px;
+    margin-bottom: 72px;
+  }
 }
 
 .number2 {
@@ -211,8 +370,25 @@
   width: 265.63px;
   height: 311.16px;
   top: 81px;
-  left: 1464.89px;
-  z-index: 1;
+  left: 660.89px;
+  z-index: -1;
+
+  svg {
+    width: 271px;
+    height: 316px;
+    stroke-width: 6;
+  }
+
+  @include xl {
+    top: 78px;
+    left: 448px;
+
+    svg {
+      stroke-width: 5;
+      width: 200px;
+      height: 200px;
+    }
+  }
 }
 
 .line2 {
@@ -220,7 +396,26 @@
   width: 262.52px;
   height: 304.12px;
   top: 457.84px;
-  left: 989.13px;
+  left: 185.13px;
+
+  svg {
+    stroke-width: 6;
+    width: 268px;
+    height: 309px;
+  }
+
+  @include xl {
+    width: 178.88px;
+    height: 207.22px;
+    top: 263.89px;
+    left: 159px;
+
+    svg {
+      stroke-width: 5;
+      width: 183px;
+      height: 211px;
+    }
+  }
 }
 
 .plus1 {
@@ -228,8 +423,13 @@
   width: 15px;
   height: 15px;
   top: 131px;
-  left: 1098px;
+  left: 294px;
   z-index: 1;
+
+  @include xl {
+    left: 202px;
+    top: 72px;
+  }
 }
 
 .plus2 {
@@ -237,7 +437,12 @@
   width: 15px;
   height: 15px;
   top: 148px;
-  left: 1120px;
+  left: 316px;
+
+  @include xl {
+    left: 224px;
+    top: 89px;
+  }
 }
 
 .plus3 {
@@ -245,37 +450,51 @@
   width: 15px;
   height: 15px;
   top: 401px;
-  left: 1578px;
+  left: 774px;
+
+  @include xl {
+    left: 382px;
+    top: 282px;
+    z-index: -1;
+  }
 }
-// }
 
-// @include xl {
-//   .athlets-image-container {
-//     position: absolute;
-//     height: 950px;
-//     width: 678px;
-//     top: 35px;
-//     left: 175px;
-//     z-index: 2;
-//   }
-//   .players-content {
-//     display: flex;
-//     flex-direction: column;
-//     margin-top: 124px;
-//     margin-left: 27%;
-//   }
-// }
+.line3 {
+  display: none;
+  @include md {
+    display: block;
+    position: absolute;
+    width: 217.7px;
+    height: 233.72px;
+    top: 18.98px;
+    left: 197.54px;
+    z-index: -1;
+  }
+}
 
-/* Mobile */
-// @media (max-width: 700px) {
-// }
+.plus4 {
+  display: none;
+  @include md {
+    display: block;
+    position: absolute;
+    width: 15.6px;
+    height: 15px;
+    top: 101px;
+    left: 36.63px;
+    opacity: 0.3px;
+    z-index: 1;
+  }
+}
 
-// /* Tablet and Smaller Desktop */
-// @media (min-width: 701px) and (max-width: 1120px) {
-//   .grid {
-//     grid-template-columns: repeat(2, 50%);
-//   }
-// }
-
-// @media (prefers-color-scheme: dark) {
-// }
+.plus5 {
+  display: none;
+  @include md {
+    display: block;
+    position: absolute;
+    width: 15.6px;
+    height: 15px;
+    top: 110px;
+    left: 59.51px;
+    z-index: 1;
+  }
+}
