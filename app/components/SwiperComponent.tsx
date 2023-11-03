@@ -8,7 +8,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function SwiperComponent() {
+interface Content {
+  athlets: { detail1: string; detail2: string; detail3: string };
+  players: { detail1: string; detail2: string; detail3: string };
+  title: { title1: string; title2: string; title3: string };
+}
+
+function SwiperComponent({
+  isAthletes,
+  content,
+}: {
+  isAthletes: boolean;
+  content: Content;
+}) {
+  console.log("content", content);
   return (
     <>
       <Swiper
@@ -22,10 +35,10 @@ export default function SwiperComponent() {
               <div className={styles.number}>01</div>
               <div className={styles.underline} />
             </div>
-            <div className={styles.title}>CONNECTION</div>
+            <div className={styles.title}>{content.title.title1}</div>
           </div>
           <div className={styles.detail}>
-            Connect with coaches directly, you can ping coaches to view profile.
+            {isAthletes ? content.athlets.detail1 : content.players.detail1}
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -34,12 +47,10 @@ export default function SwiperComponent() {
               <div className={styles.number}>02</div>
               <div className={styles.underline} />
             </div>
-            <div className={styles.title}>COLLABORATION</div>
+            <div className={styles.title}>{content.title.title2}</div>
           </div>
           <div className={styles.detail}>
-            Work with other student athletes to  increase visability. When you
-            share and like other players videos it will increase your visability
-            as a player. This is the team work aspect to Surface 1.
+            {isAthletes ? content.athlets.detail2 : content.players.detail2}
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -48,14 +59,15 @@ export default function SwiperComponent() {
               <div className={styles.number}>03</div>
               <div className={styles.underline} />
             </div>
-            <div className={styles.title}>GROWTH</div>
+            <div className={styles.title}>{content.title.title3}</div>
           </div>
           <div className={styles.detail}>
-            Resources and tools for you to get better as a student Athelte.
-            Access to training classes, tutor sessions, etc 
+            {isAthletes ? content.athlets.detail3 : content.players.detail3}
           </div>
         </SwiperSlide>
       </Swiper>
     </>
   );
 }
+
+export default SwiperComponent;

@@ -36,6 +36,14 @@
   @include md {
     margin-top: 36px;
   }
+
+  @media (max-width: 480px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 320px) {
+    gap: 10px;
+  }
 }
 
 .number-layout {
@@ -49,6 +57,11 @@
   height: 5px;
   border-radius: 2.5px;
   background: #603ebe;
+
+  @media (max-width: 320px) {
+    width: 17px;
+    height: 4px;
+  }
 }
 
 .underline-second {
@@ -68,6 +81,10 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.5px;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
 }
 
 .title {
@@ -77,6 +94,10 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.5px;
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 }
 
 .detail {
@@ -84,7 +105,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 140% */
+  line-height: 28px;
   margin-top: 31px;
   margin-bottom: 56px;
   max-width: 717px;
@@ -93,5 +114,16 @@
     font-size: 18px;
     margin-top: 21px;
     margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  @media (max-width: 320px) {
+    margin-top: 20px;
+    line-height: normal;
+    margin-bottom: 29px;
   }
 }
