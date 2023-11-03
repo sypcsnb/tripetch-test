@@ -145,7 +145,7 @@ export default function Home() {
 
           <div className={styles["content-wrapper-third"]}>
             <div className={styles.content}>
-              <div className={styles["title-layout-second"]}>
+              <div className={styles["title-layout-third"]}>
                 <div className={styles["number-layout"]}>
                   <div className={styles.number}>03</div>
                   <div className={styles["underline-white"]} />

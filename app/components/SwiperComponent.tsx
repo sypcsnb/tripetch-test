@@ -21,7 +21,6 @@ function SwiperComponent({
   isAthletes: boolean;
   content: Content;
 }) {
-  console.log("content", content);
   return (
     <>
       <Swiper

@@ -153,7 +153,7 @@
   font-size: 90px;
   font-weight: 400;
   color: #e7e7e7;
-  line-height: 105.47px;
+  line-height: normal;
   margin-top: 24px;
 
   @include md {
@@ -172,8 +172,8 @@
 
 .title-layout {
   display: flex;
-  gap: 5px;
-  margin-top: 64px;
+  gap: 10px;
+  margin-top: 59px;
   align-items: center;
 
   @include md {
@@ -187,6 +187,16 @@
 
 .title-layout-second {
   @extend .title-layout;
+  margin-top: 53px;
+
+  @include md {
+    margin-top: 30px;
+  }
+}
+
+.title-layout-third {
+  @extend .title-layout;
+  margin-top: 80px;
 
   @include md {
     margin-top: 30px;
@@ -364,8 +374,7 @@
 }
 
 .players-title-layout-second {
-  display: flex;
-  gap: 5px;
+  @extend .title-layout;
   margin-top: 52px;
   align-items: center;
 
@@ -375,8 +384,7 @@
 }
 
 .players-title-layout-third {
-  display: flex;
-  gap: 5px;
+  @extend .title-layout;
   margin-top: 87px;
   align-items: center;
 
@@ -469,19 +477,19 @@
   top: 81px;
   left: 660.89px;
   z-index: -1;
+  stroke-width: 6;
 
   svg {
     width: 271px;
     height: 316px;
-    stroke-width: 6;
   }
 
   @include xl {
     top: 78px;
     left: 448px;
+    stroke-width: 5;
 
     svg {
-      stroke-width: 5;
       width: 200px;
       height: 200px;
     }
@@ -490,11 +498,11 @@
   @media (max-width: 480px) {
     top: 23.32px;
     left: 196.89px;
+    stroke-width: 8;
 
     svg {
       width: 80px;
       height: 93px;
-      stroke-width: 5;
     }
   }
 }
@@ -505,9 +513,9 @@
   height: 304.12px;
   top: 457.84px;
   left: 185.13px;
+  stroke-width: 6;
 
   svg {
-    stroke-width: 6;
     width: 268px;
     height: 309px;
   }
@@ -517,9 +525,9 @@
     height: 207.22px;
     top: 263.89px;
     left: 159px;
+    stroke-width: 5;
 
     svg {
-      stroke-width: 5;
       width: 183px;
       height: 211px;
     }
@@ -528,9 +536,9 @@
   @media (max-width: 480px) {
     top: 108.92px;
     left: 49px;
+    stroke-width: 6;
 
     svg {
-      stroke-width: 5;
       width: 110px;
       height: 127px;
     }
@@ -599,6 +607,7 @@
     z-index: -1;
     stroke-width: 5;
   }
+
   @media (max-width: 480px) {
     width: 182px;
     height: 201px;
